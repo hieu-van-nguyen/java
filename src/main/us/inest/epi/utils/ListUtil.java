@@ -32,9 +32,9 @@ public class ListUtil {
         while (current != null) {
             if (current.next == null) {
                 //Last node
-                System.out.println(current.data);
+                System.out.println(current.val);
             } else {
-                System.out.print(current.data + " ");
+                System.out.print(current.val + " ");
             }
             current = current.next;
         }

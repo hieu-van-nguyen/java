@@ -9,7 +9,7 @@ public class MergeSortedLists {
         ListNode current = dummyHead;
 
         while (l1 != null && l2 != null) {
-            if (l1.data <= l2.data) {
+            if (l1.val <= l2.val) {
                 current.next = l1;
                 l1 = l1.next;
             } else {

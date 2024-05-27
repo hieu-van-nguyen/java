@@ -17,18 +17,18 @@ public class ListUtil {
         }
     }
 
-    public static ListNode<Integer> initLinkedList(int[] input) {
-        ListNode<Integer> dummyHead = new ListNode<>(0, null);
-        ListNode<Integer> current = dummyHead;
+    public static ListNode initLinkedList(int[] input) {
+        ListNode dummyHead = new ListNode(0, null);
+        ListNode current = dummyHead;
         for (int num : input) {
-            current.next = new ListNode<>(num, null);
+            current.next = new ListNode(num, null);
             current = current.next;
         }
         return dummyHead.next;
     }
 
-    public static void displayLinkedList(ListNode<Integer> head) {
-        ListNode<Integer> current = head;
+    public static void displayLinkedList(ListNode head) {
+        ListNode current = head;
         while (current != null) {
             if (current.next == null) {
                 //Last node

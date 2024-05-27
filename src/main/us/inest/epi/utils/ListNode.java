@@ -1,10 +1,10 @@
 package us.inest.epi.utils;
 
-public class ListNode<T> {
-    public T data;
-    public ListNode<T> next;
+public class ListNode {
+    public int data;
+    public ListNode next;
 
-    public ListNode(T data, ListNode<T> next) {
+    public ListNode(int data, ListNode next) {
         this.data = data;
         this.next = next;
     }

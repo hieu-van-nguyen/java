@@ -1,4 +1,4 @@
-package us.inest.epi.lc75;
+package us.inest.lc75;
 
 public class ContainerWithMostWater {
     public static int maxArea(int[] height) {

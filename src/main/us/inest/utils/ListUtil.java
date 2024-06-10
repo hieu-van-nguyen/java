@@ -1,4 +1,4 @@
-package us.inest.epi.utils;
+package us.inest.utils;
 
 import java.util.List;
 

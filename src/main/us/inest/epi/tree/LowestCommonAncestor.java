@@ -1,6 +1,6 @@
 package us.inest.epi.tree;
 
-import us.inest.epi.utils.TreeNode;
+import us.inest.utils.TreeNode;
 
 import java.util.*;
 

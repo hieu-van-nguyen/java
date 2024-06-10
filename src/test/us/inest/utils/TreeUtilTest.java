@@ -1,6 +1,8 @@
-package us.inest.epi.utils;
+package us.inest.utils;
 
 import org.junit.Test;
+import us.inest.utils.TreeNode;
+import us.inest.utils.TreeUtil;
 
 import static org.junit.Assert.assertEquals;
 

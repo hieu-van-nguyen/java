@@ -1,7 +1,7 @@
 package us.inest.epi.tree;
 
 import org.junit.Test;
-import us.inest.epi.utils.TreeNode;
+import us.inest.utils.TreeNode;
 
 import java.util.List;
 

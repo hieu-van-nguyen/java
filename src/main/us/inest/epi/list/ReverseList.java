@@ -1,6 +1,6 @@
 package us.inest.epi.list;
 
-import us.inest.epi.utils.ListNode;
+import us.inest.utils.ListNode;
 
 public class ReverseList {
     public static ListNode reverseList(ListNode head) {

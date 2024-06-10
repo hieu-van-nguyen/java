@@ -1,6 +1,6 @@
 package us.inest.epi.stack;
 
-import us.inest.epi.utils.StringUtil;
+import us.inest.utils.StringUtil;
 
 import java.util.Stack;
 

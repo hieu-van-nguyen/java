@@ -1,4 +1,4 @@
-package us.inest.epi.utils;
+package us.inest.utils;
 
 public class ArrayUtil {
     public static void display(int[] arr) {

@@ -3,7 +3,7 @@ package us.inest.epi.array;
 import java.util.ArrayList;
 import java.util.List;
 
-import static us.inest.epi.utils.ListUtil.displayMatrix;
+import static us.inest.utils.ListUtil.displayMatrix;
 
 public class PascalTriangle {
     public static List<List<Integer>> pascalTriangle(int numRows) {

@@ -1,6 +1,6 @@
 package us.inest.epi.stack;
 
-import us.inest.epi.utils.ArrayUtil;
+import us.inest.utils.ArrayUtil;
 
 import java.util.Stack;
 

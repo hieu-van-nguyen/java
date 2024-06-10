@@ -1,4 +1,4 @@
-package us.inest.epi.utils;
+package us.inest.utils;
 
 public class ListNode {
     public int val;

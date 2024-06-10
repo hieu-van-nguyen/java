@@ -1,7 +1,7 @@
 package us.inest.epi.list;
 
-import us.inest.epi.utils.ListNode;
-import us.inest.epi.utils.ListUtil;
+import us.inest.utils.ListNode;
+import us.inest.utils.ListUtil;
 
 public class MergeSortedLists {
     public static ListNode mergeTwoSortedList(ListNode l1, ListNode l2) {

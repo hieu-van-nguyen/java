@@ -1,4 +1,4 @@
-package us.inest.epi.binarytree;
+package us.inest.epi.tree;
 
 import us.inest.epi.utils.TreeNode;
 

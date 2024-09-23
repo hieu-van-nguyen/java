@@ -1,5 +1,8 @@
 package us.inest.utils;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TreeUtil {
     /*
      * initialize a BST from an input array
@@ -22,5 +25,20 @@ public class TreeUtil {
             root.right = insertBST(root.right, value);
         }
         return root;
+    }
+
+    public static List<Integer> inOrder(TreeNode root) {
+        List<Integer> result = new ArrayList<Integer>();
+        inOrderHelper(root, result);
+        return result;
+    }
+
+    private static void inOrderHelper(TreeNode root, List<Integer> result) {
+        if (root == null) {
+            return;
+        }
+        inOrderHelper(root.left, result);
+        result.add(root.val);
+        inOrderHelper(root.right, result);
     }
 }

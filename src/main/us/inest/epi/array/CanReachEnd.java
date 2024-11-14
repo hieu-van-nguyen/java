@@ -3,6 +3,9 @@ package us.inest.epi.array;
 import java.util.List;
 
 public class CanReachEnd {
+    /*
+     * Greedy Algorithm
+     */
     public static boolean canReachEnd(List<Integer> list) {
         int maxReachSoFar = 0;
         int lastIndex = list.size() - 1;

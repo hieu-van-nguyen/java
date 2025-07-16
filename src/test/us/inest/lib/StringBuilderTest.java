@@ -29,7 +29,7 @@ public class StringBuilderTest {
         sb.deleteCharAt(2);
         assertEquals(sb.length(), 3);
         assertEquals("abd", sb.toString());
-        assertFalse(sb.isEmpty());
+        assertFalse(sb.length() == 0);
         assertEquals("dba", sb.reverse().toString());
         sb.append("ghk");
         sb.replace(2, 4, "xxxx");

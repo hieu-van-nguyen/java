@@ -11,7 +11,7 @@ public class RightSideView {
     public List<Integer> rightSideView(TreeNode root) {
         if (root == null) return new ArrayList<>();
         Queue<TreeNode> currentLevel = new LinkedList<>();
-        Queue<TreeNode> nextLevel = new LinkedList<>(){
+        Queue<TreeNode> nextLevel = new LinkedList<TreeNode>(){
             {
                 add(root);
             }

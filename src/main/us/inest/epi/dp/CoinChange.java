@@ -12,12 +12,12 @@ public class CoinChange {
 
         // build the solution bottom-up
         dp[0] = 0;
-        for (int i = 0; i <= amount; i++) {
+        for (int a = 0; a <= amount; a++) {
             // find the solution for i
             for (int j = 0; j < coins.length; j++) {
-                if (coins[j] <= i) {
+                if (coins[j] <= a) {
                     // try this coin
-                    dp[i] = Math.min(dp[i], 1 + dp[i - coins[j]]);
+                    dp[a] = Math.min(dp[a], 1 + dp[a - coins[j]]);
                 } else {
                     break;
                 }

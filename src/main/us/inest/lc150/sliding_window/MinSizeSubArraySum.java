@@ -4,7 +4,7 @@ package us.inest.lc150.sliding_window;
  * https://leetcode.com/problems/minimum-size-subarray-sum/description/?envType=study-plan-v2&envId=top-interview-150
  */
 public class MinSizeSubArraySum {
-    public int minSubArrayLen(int target, int[] nums) {
+    public static int minSubArrayLen(int target, int[] nums) {
         int ans = Integer.MAX_VALUE;
         int left = 0, sum = 0;
         for (int right = 0; right < nums.length; right++) {

@@ -1,29 +1,29 @@
 package us.inest.epi.tries;
 
-import us.inest.utils.TriesNode;
+import us.inest.utils.TrieNode;
 
 public class Tries {
-    private final TriesNode root;
+    private final TrieNode root;
 
     public Tries() {
-        root = new TriesNode();
+        root = new TrieNode();
     }
 
     /*
      * iterative implementation of insert
      */
     public void insert(String word) {
-        TriesNode current = root;
+        TrieNode current = root;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
-            TriesNode node = current.children.get(c);
+            TrieNode node = current.children.get(c);
             if (node == null) {
-                node = new TriesNode();
+                node = new TrieNode();
                 current.children.put(c, node);
             }
             current = node;
         }
-        current.isCompleteWord = true;
+        current.isWord = true;
     }
 
     /*
@@ -33,15 +33,15 @@ public class Tries {
         insertRecursive(root, word, 0);
     }
 
-    private void insertRecursive(TriesNode current, String word, int index) {
+    private void insertRecursive(TrieNode current, String word, int index) {
         if (index == word.length()) {
-            current.isCompleteWord = true;
+            current.isWord = true;
             return;
         }
         char c = word.charAt(index);
-        TriesNode node = current.children.get(c);
+        TrieNode node = current.children.get(c);
         if (node == null) {
-            node = new TriesNode();
+            node = new TrieNode();
             current.children.put(c, node);
         }
         insertRecursive(node, word, index + 1);
@@ -51,7 +51,7 @@ public class Tries {
      * Iterative implementation of search
      */
     public boolean search(String word) {
-        TriesNode current = root;
+        TrieNode current = root;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
             if (!current.children.containsKey(c)) {
@@ -59,7 +59,7 @@ public class Tries {
             }
             current = current.children.get(c);
         }
-        return current.isCompleteWord;
+        return current.isWord;
     }
 
     /*
@@ -69,12 +69,12 @@ public class Tries {
         return searchRecursive(root, word, 0);
     }
 
-    private boolean searchRecursive(TriesNode current, String word, int index) {
+    private boolean searchRecursive(TrieNode current, String word, int index) {
         if (index == word.length()) {
-            return current.isCompleteWord;
+            return current.isWord;
         }
         char c = word.charAt(index);
-        TriesNode node = current.children.get(c);
+        TrieNode node = current.children.get(c);
         if (node == null) {
             return false;
         }
@@ -85,18 +85,18 @@ public class Tries {
         delete(root, word, 0);
     }
 
-    private boolean delete(TriesNode current, String word, int index) {
+    private boolean delete(TrieNode current, String word, int index) {
         if (index == word.length()) {
             // when end of word is reached, only delete if current.isCompleteWord is true
-            if (!current.isCompleteWord) {
+            if (!current.isWord) {
                 return false;
             }
-            current.isCompleteWord = false;
+            current.isWord = false;
             // if current has no other mapping then return true
             return current.children.size() == 0;
         }
         char c = word.charAt(index);
-        TriesNode node = current.children.get(c);
+        TrieNode node = current.children.get(c);
         if (node == null) {
             return false;
         }

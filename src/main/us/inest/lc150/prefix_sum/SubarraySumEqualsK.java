@@ -3,6 +3,9 @@ package us.inest.lc150.prefix_sum;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * https://leetcode.com/problems/subarray-sum-equals-k/description/
+ */
 public class SubarraySumEqualsK {
     Map<Integer, Integer> map = new HashMap<>();
     public int subarraySum(int[] nums, int k) {

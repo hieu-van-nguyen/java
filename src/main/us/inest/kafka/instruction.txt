@@ -1,0 +1,6 @@
+tar -xvzf C:\zip\C:\zip\kafka_2.12-3.3.1.tgz
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+.\bin\windows\kafka-topics.bat --create --topic my-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+.\bin\windows\kafka-console-producer.bat --topic my-topic --bootstrap-server localhost:9092
+.\bin\windows\kafka-console-consumer.bat --topic my-topic --from-beginning --bootstrap-server localhost:9092
